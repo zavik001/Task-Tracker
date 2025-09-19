@@ -1,0 +1,7 @@
+databaseChangeLog:
+  - include:
+      file: db/changelog/changes/V1__Create_users_table.sql
+  - include:
+      file: db/changelog/changes/V2__Create_categories_table.sql
+  - include:
+      file: db/changelog/changes/V3__Create_tasks_table.sql
