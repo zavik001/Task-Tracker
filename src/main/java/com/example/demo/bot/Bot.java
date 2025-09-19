@@ -69,7 +69,7 @@ public class Bot implements UpdatesListener {
         Long telegramId = update.message().from().id();
         Long chatId = update.message().chat().id();
         try {
-            if (text.startsWith("/")) {
+            if (text.startsWith("/") && !text.equals("/cancel")) {
                 addStateService.removeState(telegramId);
                 String cmd = text.split(" ")[0];
                 commands.stream().filter(c -> c.command().equalsIgnoreCase(cmd)).findFirst()
